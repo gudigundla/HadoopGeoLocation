@@ -1,5 +1,7 @@
 # HadoopGeoLocation
-Extra Credit Project for Cloud Computing course at Indiana University. Student ID: hgudigun
+# Student ID: hgudigun
+
+Extra Credit Project for Cloud Computing course at Indiana University. 
 
 Description:
 
