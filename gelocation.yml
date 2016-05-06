@@ -1,0 +1,15 @@
+--
+- hosts: frontendnodes
+  remote_user: hadoop
+  tasks:
+	    - name: Deploying the geolocation project software from current directory to frontendnode
+		  synchronize: src=HadoopGeoLocation.jar dest=~/
+		  delegate_to: localhost
+
+        - name: Deploying the input data set for geolocation project onto the hadoop hdfs
+	      synchronize: src=geolocation.input dest=~/
+		  delegate_to: localhost
+
+		- name: Deploying the script file to frontnode, which executes the hadoop mapreduce jobs
+		  synchronize: src=geo_analysis_script.sh dest=~/
+		  delegate_to: localhost
